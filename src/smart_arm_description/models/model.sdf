@@ -1,0 +1,600 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+	<model name="robot">
+		<link name="back_wall">
+			<pose>2.1 -0.1 1.6 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>3454.08000000</ixx>
+					<iyy>9367.68000000</iyy>
+					<izz>5940.48000000</izz>
+				</inertia>
+				<mass>4032.00000000</mass>
+			</inertial>
+			<visual name="back_wall_vis">
+				<geometry>
+					<box>
+						<size>4.2 0.2 3.2</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="back_wall_col">
+				<geometry>
+					<box>
+						<size>4.2 0.2 3.2</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="ceeling">
+			<pose>2.1 0.75 3.1 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>360.67500000</ixx>
+					<iyy>2784.60000000</iyy>
+					<izz>3132.67500000</izz>
+				</inertia>
+				<mass>1890.00000000</mass>
+			</inertial>
+			<visual name="ceeling_vis">
+				<geometry>
+					<box>
+						<size>4.2 1.5 0.2</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="ceeling_col">
+				<geometry>
+					<box>
+						<size>4.2 1.5 0.2</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="left_wall">
+			<pose>0.1 0.75 1.5 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>1265.62500000</ixx>
+					<iyy>1017.00000000</iyy>
+					<izz>257.62500000</izz>
+				</inertia>
+				<mass>1350.00000000</mass>
+			</inertial>
+			<visual name="left_wall_vis">
+				<geometry>
+					<box>
+						<size>0.2 1.5 3</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="left_wall_col">
+				<geometry>
+					<box>
+						<size>0.2 1.5 3</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="wright_wall">
+			<pose>4.1000000000000005 0.75 1.5 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>1265.62500000</ixx>
+					<iyy>1017.00000000</iyy>
+					<izz>257.62500000</izz>
+				</inertia>
+				<mass>1350.00000000</mass>
+			</inertial>
+			<visual name="wright_wall_vis">
+				<geometry>
+					<box>
+						<size>0.2 1.5 3</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="wright_wall_col">
+				<geometry>
+					<box>
+						<size>0.2 1.5 3</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<joint name="back_wall_to_ceeling_joint" type="fixed">
+			<pose>0.0 -0.75 0.0 0 0 0</pose>
+			<child>ceeling</child>
+			<parent>back_wall</parent>
+		</joint>
+		<joint name="back_wall_to_left_wall_joint" type="fixed">
+			<pose>0.0 -0.75 0.0 0 0 0</pose>
+			<child>left_wall</child>
+			<parent>back_wall</parent>
+		</joint>
+		<joint name="back_wall_to_wright_wall_joint" type="fixed">
+			<pose>0.0 -0.75 0.0 0 0 0</pose>
+			<child>wright_wall</child>
+			<parent>back_wall</parent>
+		</joint>
+		<link name="back_cabinet">
+			<pose>2.1 0.25 0.5 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.11875000</ixx>
+					<iyy>1.46680000</iyy>
+					<izz>1.39555000</izz>
+				</inertia>
+				<mass>1.14000000</mass>
+			</inertial>
+			<visual name="back_cabinet_vis">
+				<geometry>
+					<box>
+						<size>3.8000000000000003 0.5 1.0</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="back_cabinet_col">
+				<geometry>
+					<box>
+						<size>3.8000000000000003 0.5 1.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="front_cabinet">
+			<pose>2.1 1.25 0.5 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.11875000</ixx>
+					<iyy>1.46680000</iyy>
+					<izz>1.39555000</izz>
+				</inertia>
+				<mass>1.14000000</mass>
+			</inertial>
+			<visual name="front_cabinet_vis">
+				<geometry>
+					<box>
+						<size>3.8000000000000003 0.5 1.0</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="front_cabinet_col">
+				<geometry>
+					<box>
+						<size>3.8000000000000003 0.5 1.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="top_cabinet">
+			<pose>2.1 0.25 1.75 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00119938</ixx>
+					<iyy>0.06860188</iyy>
+					<izz>0.06977750</izz>
+				</inertia>
+				<mass>0.05700000</mass>
+			</inertial>
+			<visual name="top_cabinet_vis">
+				<geometry>
+					<box>
+						<size>3.8000000000000003 0.5 0.05</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="top_cabinet_col">
+				<geometry>
+					<box>
+						<size>3.8000000000000003 0.5 0.05</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="robot_carrier">
+			<pose>2.1 0.75 0.4 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.06764000</ixx>
+					<iyy>1.14608000</iyy>
+					<izz>1.11644000</izz>
+				</inertia>
+				<mass>0.91200000</mass>
+			</inertial>
+			<visual name="robot_carrier_vis">
+				<geometry>
+					<box>
+						<size>3.8000000000000003 0.5 0.8</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="robot_carrier_col">
+				<geometry>
+					<box>
+						<size>3.8000000000000003 0.5 0.8</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<joint name="back_wall_to_back_cabinet_joint" type="fixed">
+			<pose>0.0 -0.25 0.0 0 0 0</pose>
+			<child>back_cabinet</child>
+			<parent>back_wall</parent>
+		</joint>
+		<joint name="back_wall_to_top_cabinet_joint" type="fixed">
+			<pose>0.0 -0.25 0.0 0 0 0</pose>
+			<child>top_cabinet</child>
+			<parent>back_wall</parent>
+		</joint>
+		<joint name="back_cabinet_to_robot_carrier_joint" type="fixed">
+			<pose>0.0 -0.25 0.0 0 0 0</pose>
+			<child>robot_carrier</child>
+			<parent>back_cabinet</parent>
+		</joint>
+		<joint name="robot_carrier_to_front_cabinet_joint" type="fixed">
+			<pose>0.0 -0.25 0.0 0 0 0</pose>
+			<child>front_cabinet</child>
+			<parent>robot_carrier</parent>
+		</joint>
+		<link name="arm_base">
+			<pose>2.1 0.75 0.85 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00030829</ixx>
+					<iyy>0.00030829</iyy>
+					<izz>0.00046244</izz>
+				</inertia>
+				<mass>0.02312212</mass>
+			</inertial>
+			<visual name="arm_base_vis">
+				<geometry>
+					<cylinder>
+						<radius>0.2</radius>
+						<length>0.2</length>
+					</cylinder>
+				</geometry>
+			</visual>
+			<collision name="arm_base_col">
+				<geometry>
+					<cylinder>
+						<radius>0.2</radius>
+						<length>0.2</length>
+					</cylinder>
+				</geometry>
+			</collision>
+		</link>
+		<link name="arm">
+			<pose>2.1 0.75 1.075 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00000440</ixx>
+					<iyy>0.00000440</iyy>
+					<izz>0.00000045</izz>
+				</inertia>
+				<mass>0.00080285</mass>
+			</inertial>
+			<visual name="arm_vis">
+				<geometry>
+					<cylinder>
+						<radius>0.03333333333333333</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+			</visual>
+			<collision name="arm_col">
+				<geometry>
+					<cylinder>
+						<radius>0.03333333333333333</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+			</collision>
+		</link>
+		<link name="arm_rotetor">
+			<pose>2.1 0.75 1.325 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00000440</ixx>
+					<iyy>0.00000440</iyy>
+					<izz>0.00000045</izz>
+				</inertia>
+				<mass>0.00080285</mass>
+			</inertial>
+			<visual name="arm_rotetor_vis">
+				<geometry>
+					<cylinder>
+						<radius>0.03333333333333333</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+			</visual>
+			<collision name="arm_rotetor_col">
+				<geometry>
+					<cylinder>
+						<radius>0.03333333333333333</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+			</collision>
+		</link>
+		<joint name="robot_carrier_to_arm_base_joint" type="prismatic">
+			<pose>0 0 -0.1 0 0 0</pose>
+			<child>arm_base</child>
+			<parent>robot_carrier</parent>
+			<axis>
+				<xyz>1 0 0</xyz>
+				<dynamics>
+					<friction>0.05</friction>
+					<damping>0.03</damping>
+				</dynamics>
+				<limit>
+					<upper>1.6</upper>
+					<lower>-1.6</lower>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="arm_base_to_arm_joint" type="prismatic">
+			<pose>0 0 -0.125 0 0 0</pose>
+			<child>arm</child>
+			<parent>arm_base</parent>
+			<axis>
+				<xyz>0 0 1</xyz>
+				<dynamics>
+					<friction>0.05</friction>
+					<damping>0.03</damping>
+				</dynamics>
+				<limit>
+					<upper>1.6</upper>
+					<lower>-1.6</lower>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="arm_to_arm_rotetor_joint" type="revolute">
+			<pose>0 0 -0.125 0 0 0</pose>
+			<child>arm_rotetor</child>
+			<parent>arm</parent>
+			<axis>
+				<xyz>1 0 0</xyz>
+				<dynamics>
+					<friction>0.05</friction>
+					<damping>0.03</damping>
+				</dynamics>
+				<limit>
+					<upper>3.141592653589793</upper>
+					<lower>-3.141592653589793</lower>
+				</limit>
+			</axis>
+		</joint>
+		<link name="wrist_rx">
+			<pose>2.1 0.75 1.4541666666666666 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00000000</ixx>
+					<iyy>0.00000000</iyy>
+					<izz>0.00000001</izz>
+				</inertia>
+				<mass>0.00001713</mass>
+			</inertial>
+			<visual name="wrist_rx_vis">
+				<geometry>
+					<cylinder>
+						<radius>0.026666666666666665</radius>
+						<length>0.008333333333333333</length>
+					</cylinder>
+				</geometry>
+			</visual>
+			<collision name="wrist_rx_col">
+				<geometry>
+					<cylinder>
+						<radius>0.026666666666666665</radius>
+						<length>0.008333333333333333</length>
+					</cylinder>
+				</geometry>
+			</collision>
+		</link>
+		<link name="wrist_ry">
+			<pose>2.1 0.75 1.4625 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00000000</ixx>
+					<iyy>0.00000000</iyy>
+					<izz>0.00000001</izz>
+				</inertia>
+				<mass>0.00001713</mass>
+			</inertial>
+			<visual name="wrist_ry_vis">
+				<geometry>
+					<cylinder>
+						<radius>0.026666666666666665</radius>
+						<length>0.008333333333333333</length>
+					</cylinder>
+				</geometry>
+			</visual>
+			<collision name="wrist_ry_col">
+				<geometry>
+					<cylinder>
+						<radius>0.026666666666666665</radius>
+						<length>0.008333333333333333</length>
+					</cylinder>
+				</geometry>
+			</collision>
+		</link>
+		<link name="wrist_rz">
+			<pose>2.1 0.75 1.4708333333333332 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00000000</ixx>
+					<iyy>0.00000000</iyy>
+					<izz>0.00000001</izz>
+				</inertia>
+				<mass>0.00001713</mass>
+			</inertial>
+			<visual name="wrist_rz_vis">
+				<geometry>
+					<cylinder>
+						<radius>0.026666666666666665</radius>
+						<length>0.008333333333333333</length>
+					</cylinder>
+				</geometry>
+			</visual>
+			<collision name="wrist_rz_col">
+				<geometry>
+					<cylinder>
+						<radius>0.026666666666666665</radius>
+						<length>0.008333333333333333</length>
+					</cylinder>
+				</geometry>
+			</collision>
+		</link>
+		<link name="finger1">
+			<pose>2.0856770833333336 0.75 1.5041666666666667 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00000001</ixx>
+					<iyy>0.00000001</iyy>
+					<izz>0.00000000</izz>
+				</inertia>
+				<mass>0.00001872</mass>
+			</inertial>
+			<visual name="finger1_vis">
+				<geometry>
+					<box>
+						<size>0.0078125 0.03125 0.08333333333333333</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="finger1_col">
+				<geometry>
+					<box>
+						<size>0.0078125 0.03125 0.08333333333333333</size>
+					</box>
+				</geometry>
+			</collision>
+			<sensor name="finger1_sensor" type="contact">
+				<contact>
+					<collision>finger1_col</collision>
+				</contact>
+				<always_on>1</always_on>
+				<update_rate>30</update_rate>
+				<visualize>true</visualize>
+				<plugin filename="libfinger_contact.so" name="my_plugin"/>
+			</sensor>
+		</link>
+		<link name="finger2">
+			<pose>2.1143229166666666 0.75 1.5041666666666667 0 0 0</pose>
+			<inertial>
+				<inertia>
+					<ixx>0.00000001</ixx>
+					<iyy>0.00000001</iyy>
+					<izz>0.00000000</izz>
+				</inertia>
+				<mass>0.00001872</mass>
+			</inertial>
+			<visual name="finger2_vis">
+				<geometry>
+					<box>
+						<size>0.0078125 0.03125 0.08333333333333333</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="finger2_col">
+				<geometry>
+					<box>
+						<size>0.0078125 0.03125 0.08333333333333333</size>
+					</box>
+				</geometry>
+			</collision>
+			<sensor name="finger2_sensor" type="contact">
+				<contact>
+					<collision>finger2_col</collision>
+				</contact>
+				<always_on>1</always_on>
+				<update_rate>30</update_rate>
+				<visualize>true</visualize>
+				<plugin filename="libfinger_contact.so" name="my_plugin"/>
+			</sensor>
+		</link>
+		<joint name="arm_rotetor_to_wrist_rx_joint" type="revolute">
+			<pose>0 0 -0.004166666666666667 0 0 0</pose>
+			<child>wrist_rx</child>
+			<parent>arm_rotetor</parent>
+			<axis>
+				<xyz>0 0 1</xyz>
+				<dynamics>
+					<friction>0.05</friction>
+					<damping>0.03</damping>
+				</dynamics>
+				<limit>
+					<upper>3.141592653589793</upper>
+					<lower>-3.141592653589793</lower>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="wrist_rx_to_wrist_ry_joint" type="revolute">
+			<pose>0 0 -0.004166666666666667 0 0 0</pose>
+			<child>wrist_ry</child>
+			<parent>wrist_rx</parent>
+			<axis>
+				<xyz>0 0 1</xyz>
+				<dynamics>
+					<friction>0.05</friction>
+					<damping>0.03</damping>
+				</dynamics>
+				<limit>
+					<upper>3.141592653589793</upper>
+					<lower>-3.141592653589793</lower>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="wrist_ry_to_wrist_rz_joint" type="revolute">
+			<pose>0 0 -0.004166666666666667 0 0 0</pose>
+			<child>wrist_rz</child>
+			<parent>wrist_ry</parent>
+			<axis>
+				<xyz>0 0 1</xyz>
+				<dynamics>
+					<friction>0.05</friction>
+					<damping>0.03</damping>
+				</dynamics>
+				<limit>
+					<upper>3.141592653589793</upper>
+					<lower>-3.141592653589793</lower>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="wrist_rz_to_finger1_joint" type="revolute">
+			<pose>0 0 -0.041666666666666664 0 0 0</pose>
+			<child>finger1</child>
+			<parent>wrist_rz</parent>
+			<axis>
+				<xyz>0 1 0</xyz>
+				<dynamics>
+					<friction>0.05</friction>
+					<damping>0.03</damping>
+				</dynamics>
+				<limit>
+					<upper>1.5707963267948966</upper>
+					<lower>-1.5707963267948966</lower>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="wrist_rz_to_finger2_joint" type="revolute">
+			<pose>0 0 -0.041666666666666664 0 0 0</pose>
+			<child>finger2</child>
+			<parent>wrist_rz</parent>
+			<axis>
+				<xyz>0 1 0</xyz>
+				<dynamics>
+					<friction>0.05</friction>
+					<damping>0.03</damping>
+				</dynamics>
+				<limit>
+					<upper>1.5707963267948966</upper>
+					<lower>-1.5707963267948966</lower>
+				</limit>
+			</axis>
+		</joint>
+		<plugin filename="libarm_controller.so" name="arm_controller"/>
+		<plugin filename="libgripper_controller.so" name="gripper_controller"/>
+	</model>
+</sdf>

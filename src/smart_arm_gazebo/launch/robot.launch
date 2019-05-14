@@ -1,0 +1,13 @@
+<launch>
+	
+	<arg name="paused" default="true"/>
+    
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="world_name" value="$(find smart_arm_gazebo)/worlds/robot.world" />
+    </include>
+    
+    <node name="smart_arm_sdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find smart_arm_description)/models/model.sdf -sdf -model robot">
+    </node>
+    
+</launch>
